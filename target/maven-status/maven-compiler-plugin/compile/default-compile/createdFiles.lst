@@ -1,0 +1,6 @@
+pageObjects\CheckoutPage.class
+pageObjects\CreateAccPage.class
+pageObjects\LoginPage.class
+Academy\App.class
+Academy\base.class
+pageObjects\HomePage.class

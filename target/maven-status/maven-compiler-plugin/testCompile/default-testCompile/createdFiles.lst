@@ -1,0 +1,7 @@
+Academy\ShopProcess.class
+Academy\Logout.class
+stepDefinitions\stepDefinition.class
+Academy\AppTest.class
+cucumberOptions\TestRunner.class
+Academy\CreateAccount.class
+Academy\Login.class
