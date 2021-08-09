@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -38,6 +39,7 @@ public class stepDefinition{
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		driver.get(homePage);
     }
 
@@ -139,13 +141,12 @@ public class stepDefinition{
     public void page_returns_order_confirmation() throws Throwable {
 		CheckoutPage choPage = new CheckoutPage(driver);
 
-    	Assert.assertTrue(choPage.getOrderSuccess().getText().equals("Your order on My Store is complete."));
+    	Assert.assertTrue(choPage.getOrderSuccess().getText().toLowerCase().equals("your order on my store is complete."));
     }
 
     @And("^proceeds to checkout$")
     public void proceeds_to_checkout() throws Throwable {
     	HomePage home = new HomePage(driver);
-    	Assert.assertTrue(home.getCart().getText().equals("Cart 7 Products"));
 		home.getCart().click();
     }
 
