@@ -1,5 +1,7 @@
 package Academy;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -27,7 +29,7 @@ public class Login extends base{
 		//Logged in
 		String expected = "MY ACCOUNT";
 		String actual = loginPage.getPageTitle().getText();
-		Assert.assertTrue(expected.equals(actual.toUpperCase()));
+		AssertJUnit.assertTrue(expected.equals(actual.toUpperCase()));
 	
 	}
 	

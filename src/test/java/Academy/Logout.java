@@ -1,8 +1,9 @@
 package Academy;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
-import org.junit.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
@@ -17,6 +18,6 @@ public class Logout extends base{
 		//Logouts from any page
 		home.getSignOut().click();
 		//
-		Assert.assertNotNull(home.getLogin());
+		AssertJUnit.assertNotNull(home.getLogin());
 	}
 }

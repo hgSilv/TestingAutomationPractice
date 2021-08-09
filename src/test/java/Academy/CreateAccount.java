@@ -1,6 +1,8 @@
 package Academy;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.support.ui.Select;
@@ -41,7 +43,7 @@ public class CreateAccount extends base{
 		//Submited Account for creation
 		String expected = "MY ACCOUNT";
 		String actual = loginPage.getPageTitle().getText();
-		Assert.assertTrue(expected.equals(actual.toUpperCase()));
+		AssertJUnit.assertTrue(expected.equals(actual.toUpperCase()));
 		
 	}
 	

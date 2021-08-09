@@ -1,9 +1,10 @@
 package Academy;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.util.List;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,7 +39,7 @@ public class ShopProcess extends base{
 			w.until(ExpectedConditions.invisibilityOf(home.getShoppingBtn()));
 		}
 		
-		Assert.assertTrue(home.getCart().getText().equals("Cart 7 Products"));
+		AssertJUnit.assertTrue(home.getCart().getText().equals("Cart 7 Products"));
 		home.getCart().click();
 		w.until(ExpectedConditions.elementToBeClickable(choPage.getSmryCheckoutBtn()));
 		choPage.getSmryCheckoutBtn().click();
@@ -56,7 +57,7 @@ public class ShopProcess extends base{
 		//Payment
 		choPage.getPayBankWire().click();
 		choPage.getSubmitOrder().click();
-		Assert.assertTrue(choPage.getOrderSuccess().getText().equals("Your order on My Store is complete."));
+		AssertJUnit.assertTrue(choPage.getOrderSuccess().getText().equals("Your order on My Store is complete."));
 		//System.out.println(choPage.getOrderSuccess().getText());
 	}
 }
