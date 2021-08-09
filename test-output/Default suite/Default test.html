@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 02 15:05:41 CDT 2021</td>
+<td>Started on:</td><td>Mon Aug 09 14:39:09 CDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37635 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76866 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,44 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cucumberOptions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Creation of a new account", "Optional[Sign up]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using css selector=input[id=&apos;id_gender1&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-4CJHACFT&apos;, ip: &apos;192.168.100.86&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.CreateAccPage.getGender(CreateAccPage.java:30)
+	at stepDefinitions.stepDefinition.user_provides_information_to_register_with(stepDefinition.java:47)
+	at ?.User provides information to Register with(file:///C:/Users/102333781/eclipse-workspace/E2EProject/src/test/java/features/signup.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace865430810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace865430810'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using css selector=input[id=&apos;id_gender1&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-4CJHACFT&apos;, ip: &apos;192.168.100.86&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.CreateAccPage.getGender(CreateAccPage.java:30)
+	at stepDefinitions.stepDefinition.user_provides_information_to_register_with(stepDefinition.java:47)
+	at ?.User provides information to Register with(file:///C:/Users/102333781/eclipse-workspace/E2EProject/src/test/java/features/signup.feature:6)
+</pre></div></td>
+<td>24</td>
+<td>cucumberOptions.TestRunner@3bf9ce3e</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +113,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Academy.ShopProcess.shopProcessTest()'><b>shopProcessTest</b><br>Test class: Academy.ShopProcess</td>
+<td title='cucumberOptions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "login of an existing account", "Optional[Login]"</td>
 <td></td>
-<td>37</td>
-<td>Academy.ShopProcess@51f116b8</td></tr>
+<td>11</td>
+<td>cucumberOptions.TestRunner@3bf9ce3e</td></tr>
+<tr>
+<td title='cucumberOptions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sign off from an existing session", "Optional[Logout]"</td>
+<td></td>
+<td>10</td>
+<td>cucumberOptions.TestRunner@3bf9ce3e</td></tr>
+<tr>
+<td title='cucumberOptions.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "the shopping process till the end", "Optional[Shopping Process]"</td>
+<td></td>
+<td>29</td>
+<td>cucumberOptions.TestRunner@3bf9ce3e</td></tr>
 </table><p>
 </body>
 </html>

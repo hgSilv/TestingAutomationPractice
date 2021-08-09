@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Academy.ShopProcess">
+      <class name="cucumberOptions.TestRunner">
         <methods>
-          <include name="shopProcessTest"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="3"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- Academy.ShopProcess -->
+      </class> <!-- cucumberOptions.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
