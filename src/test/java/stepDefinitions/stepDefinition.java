@@ -3,13 +3,14 @@ package stepDefinitions;
 import java.util.List;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import Academy.base;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,11 +21,15 @@ import pageObjects.CreateAccPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
+
 @RunWith(Cucumber.class)
-public class stepDefinition extends base{
+public class stepDefinition{
+	WebDriver driver;
+	
 	@Given("^User is on \"([^\"]*)\"$")
     public void user_is_on_homePage(String homePage) throws Throwable {
-		driver = initializeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\102333781\\Desktop\\Borc\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get(homePage);
     }
 
