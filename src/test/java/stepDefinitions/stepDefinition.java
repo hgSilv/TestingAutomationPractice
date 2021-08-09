@@ -17,11 +17,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.CheckoutPage;
 import pageObjects.CreateAccPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 @RunWith(Cucumber.class)
@@ -30,14 +30,11 @@ public class stepDefinition{
 	
 	@Given("^User is on \"([^\"]*)\"$")
     public void user_is_on_homePage(String homePage) throws Throwable {
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\102333781\\Desktop\\Borc\\chromedriver.exe");
-		//driver = new ChromeDriver();
-	    	 WebDriverManager.chromedriver().setup();
- 		ChromeOptions options = new ChromeOptions();
- 		options.addArguments("--no-sandbox");
- 		options.addArguments("--disable-dev-shm-usage");
- 		options.addArguments("--headless");
- 		driver = new ChromeDriver(options);
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\102333781\\Desktop\\Borc\\chromedriver.exe");
+		driver = new ChromeDriver();*/
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		driver = new ChromeDriver(options);
 		driver.get(homePage);
     }
 
